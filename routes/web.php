@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ConvertController@index')->name('index');
+
+Route::post('/convert', 'ConvertController@convert')->name('convert');
